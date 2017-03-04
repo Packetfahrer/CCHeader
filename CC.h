@@ -1,5 +1,6 @@
 #import <CoreFoundation/CoreFoundation.h>
 #import <UIKit/UIKit.h>
+#import <substrate.h>
 
 #define isiOS9Up (kCFCoreFoundationVersionNumber >= 1217.11)
 #define isiOS8 (kCFCoreFoundationVersionNumber >= 1129.15 && kCFCoreFoundationVersionNumber < 1217.11)
@@ -22,15 +23,17 @@
 + (UIColor *)systemDarkRedColor;
 + (UIColor *)systemDarkTealColor;
 + (UIColor *)systemDarkYellowColor;
++ (UIColor *)lightGrayColor;
 + (UIColor *)whiteColor;
 + (UIColor *)blackColor;
 @end
 
 @interface UIImage (Addition)
++ (UIImage *)kitImageNamed:(NSString *)name;
 + (UIImage *)imageNamed:(NSString *)name inBundle:(NSBundle *)bundle;
++ (UIImage *)pu_PhotosUIImageNamed:(NSString *)name;
 - (UIImage *)_flatImageWithColor:(UIColor *)color;
 @end
-
 
 @interface NSUserDefaults (Addition)
 - (id)objectForKey:(NSString *)key inDomain:(NSString *)domain;
